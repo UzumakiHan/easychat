@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wechat</title>
+    <link rel="stylesheet" href="./lib/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="icon" href="./image//wechat.png" type="image/x-icon"/>
+    <!--the css for this plugin-->
+    <link rel="stylesheet" href="./lib/css/jquery.emoji.css"/>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/css/bootstrap.css">
+</head>
+
+<body>
+    <section id="login" style="display: block;">
+        <div class=" loginbox container ">
+
+            <div class="row justify-content-center  ">
+                <div class="col-lg-6 align-items-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>登录</h4>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><img src="./image/user.png" alt="" class="img-fluid" style="width: 20px; height: 20px;"></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="请输入用户名" id="username">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="text-muted">选择用户头像</p>
+                            <div class="useravatars">
+                                <ul style="list-style: none;">
+                                    <li><img src="./image/avatar1.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar2.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar3.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar4.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar5.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar6.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar7.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar8.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar9.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar10.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar11.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar12.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar13.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar14.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar15.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar16.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar17.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar18.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar19.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar20.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar21.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar22.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar23.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar24.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar25.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar26.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar27.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar28.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar29.jpg" alt="" class="img-fluid"></li>
+                                    <li><img src="./image/avatar30.jpg" alt="" class="img-fluid"></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="text-center mb-0"><button type="button" class="btn btn-primary"
+                                    id="loginbtn">登录</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="home" style="display: none;">
+        <div class="container home">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-md-none d-lg-block" id="left" style="overflow: scroll;">
+
+                    <div id="leftop">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <img src="./image/avatar1.jpg" alt="" class="img-fluid" id="userimg">
+                                <span id="user_name">Jeslie He</span>
+                            </li>
+                            <li class="list-group-item">
+                                    <img src="./image/users.png" alt="" class="img-fluid" style="width: 30px; height: 30px;">
+                                <span style="margin-left: 0;">用户列表</span>
+                            </li>
+                            <ul class="list-group" id="userlist"></ul>
+                        </ul>
+                        
+                        
+
+                    </div>
+                </div>
+
+                <div class="col-lg-8" id="right">
+
+                    <p class="title"  data-toggle="modal" data-target="#myModal">
+                       
+                    </p>
+                    <div class="modal fade" id="myModal" data-backdrop="false">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+        
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title"><img src="./image/users.png" alt="" class="img-fluid" style="width: 30px; height: 30px;">群聊成员</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+        
+                                    <!-- 模态框主体 -->
+                                    <div class="modal-body" id="group">
+           
+                                    </div>
+        
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    <div class="container content">
+                        <!-- <div class="row">
+                            <div class="col-lg-12">
+                                <div class="other">
+                                    <p class="mt-2"> <img class="other-img" src="./image/avatar2.jpg" /></p>
+                                    <div class="other-msg">
+
+                                        <p class="otheruser mt-2 ml-1">Jeslie</p>
+                                        <p class="admin-reply ml-3">欢迎来抢楼！欢迎来抢楼！欢迎来抢楼！欢迎来抢楼！欢迎来抢楼！欢迎来抢楼！欢迎来抢楼！</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="msg">
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row  ">
+                            <div class="col-lg-12 ">
+                                <div class="my" style="float: right;">
+                                    <div class="my-msg">
+
+                                        <p class="myuser mt-2 mr-1 text-right">Jeslie</p>
+                                        <p class="my-reply mr-3">欢迎来抢楼!</p>
+                                    </div>
+                                    <p class="mt-2"> <img class="my-img" src="./image/avatar2.jpg" /></p>
+
+                                </div>
+
+                            </div>
+                        </div> -->
+
+                    </div>
+                    <hr id="xian" style="  margin-bottom:5px;
+                    margin-top: 0;">
+                    <div class="container" >
+                        <!-- <div class="row">
+                            <div class="col-lg-12" >
+                                <p class="face"><img src="./image/emoji.jpg" alt="" class="img-fluid" ></p>
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-lg-12" id="content">
+                                <textarea class="form-control" rows="5" id="comment" ></textarea>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="text-right mb-0"><button type="button" class="btn btn-success btn-sm"
+                                        id="send">发送</button></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="lib/js/popper.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="lib/js/jquery.mousewheel-3.0.6.min.js"></script>
+<!--the js for jquery.mCustomScrollbar-->
+<script src="lib/js/jquery.mCustomScrollbar.min.js"></script>
+<!--the js for this plugin-->
+<script src="lib/js/jquery.emoji.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
